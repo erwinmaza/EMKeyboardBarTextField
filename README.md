@@ -38,11 +38,11 @@ You'll need to download this entire repo for the sample app to work, as the EMKe
 
 Some screenshots:
 
-![EMKeyboardBarTextField Table Sections](EMKeyboardBarTextField/wiki/images/keyboardTextfield1.png)
+	 ![EMKeyboardBarTextField Table Sections](EMKeyboardBarTextField/wiki/images/keyboardTextfield1.png)
  
-![EMKeyboardBarTextField Table Sections](EMKeyboardBarTextField/wiki/images/keyboardTextfield2.png)
+	 ![EMKeyboardBarTextField Table Sections](EMKeyboardBarTextField/wiki/images/keyboardTextfield2.png)
  
-![EMKeyboardBarTextField Table Sections](EMKeyboardBarTextField/wiki/images/keyboardTextfield3.png)
+	 ![EMKeyboardBarTextField Table Sections](EMKeyboardBarTextField/wiki/images/keyboardTextfield3.png)
 
 ## Auto Layout
 
@@ -70,7 +70,7 @@ The following is noted in EMKeyboardBarTextField.h:
 	Note: in order to faciliate frame animation, EMKeyboardBarTextField will temporarily remove it's own layout constraints, 
 	and those of its superview that affect it.
 		* This means that if there are additional contraints, not owned by its immediate superview, EMKeyboardBarTextField 
-		may not work properly (will not render in the toolbar).
+		may not work properly (may not render in the toolbar).
 	
 
 
