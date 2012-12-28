@@ -15,7 +15,8 @@ If all text inputs in the view are EMKeyboardBarTextFields, the view controller 
 The EMKeyboardBarTextField subclass code concerns itself only with the placement of the text field and related functions.
 
 	* It does not interfere with the UITextField's delegate or other properties. 
-	* It also does not guarantee a proper rendering under all circumstances. It is up to you to set reasonable sizes and options.
+	* It also does not guarantee a proper rendering under all circumstances. 
+		It is up to you to set reasonable sizes and options.
 
 The EMKeyboardBarTextField dismiss button title matches the UITextField's keyboard type.
 
@@ -36,8 +37,8 @@ A sample app is included. While this is a universal build, EMKeyboardBarTextFiel
 
 3 Optionally set the EMKeyboardBarTextField's *showPrompt* or *autoLayoutAnimateOnKeyboardWillShow* properties. 
 
-	* *showPrompt* is self explanatory. 
-	* *autoLayoutAnimateOnKeyboardWillShow* is discussed below.
+	* showPrompt is self explanatory. 
+	* autoLayoutAnimateOnKeyboardWillShow is discussed below.
 
 ## Sample App
 
@@ -83,8 +84,9 @@ The following is noted in EMKeyboardBarTextField.h:
 	
 ## TODO
 
-1 Full iPad support
-2 Localization of the "dismiss" button titles.
+1. Full iPad support.
+
+2. Localization of the dismiss button titles.
 
 ## License
 
