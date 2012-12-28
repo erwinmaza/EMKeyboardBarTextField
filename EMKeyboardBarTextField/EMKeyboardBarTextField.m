@@ -122,9 +122,26 @@
 		}
 		
 		self.originalContainerConstraints = [NSArray arrayWithArray:tmp];
+		
+		NSString *title = @"Return";
 	
+		switch (self.returnKeyType) {
+			case UIReturnKeyGo:				{ title = @"Go";	break;}
+			case UIReturnKeyGoogle:			{ title = @"Google";break;}
+			case UIReturnKeyJoin:			{ title = @"Join";	break;}
+			case UIReturnKeyNext:			{ title = @"Next";	break;}
+			case UIReturnKeyRoute:			{ title = @"Route";	break;}
+			case UIReturnKeySearch:			{ title = @"Search";break;}
+			case UIReturnKeySend:			{ title = @"Send";	break;}
+			case UIReturnKeyYahoo:			{ title = @"Yahoo";	break;}
+			case UIReturnKeyDone:			{ title = @"Done";	break;}
+			case UIReturnKeyEmergencyCall:	{ title = @"Call";	break;}
+			default:
+				break;
+		}
+
 		UIBarButtonItem *spacer =		[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:NULL action:NULL];
-		UIBarButtonItem *doneButton =	[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(done)];
+		UIBarButtonItem *doneButton =	[[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStyleBordered target:self action:@selector(done)];
 		
 		self.toolBar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, fullFrame.size.height, kbWidth, toolbarHeight)];
 		toolBar.barStyle = UIBarStyleBlack;
@@ -144,21 +161,6 @@
 		
 		[fullView addSubview:toolBar];
 		
-		switch (self.returnKeyType) {
-			case UIReturnKeyDefault:		{ [doneButton setTitle:@"Return"];	break;}
-			case UIReturnKeyGo:				{ [doneButton setTitle:@"Go"];		break;}
-			case UIReturnKeyGoogle:			{ [doneButton setTitle:@"Google"];	break;}
-			case UIReturnKeyJoin:			{ [doneButton setTitle:@"Join"];	break;}
-			case UIReturnKeyNext:			{ [doneButton setTitle:@"Next"];	break;}
-			case UIReturnKeyRoute:			{ [doneButton setTitle:@"Route"];	break;}
-			case UIReturnKeySearch:			{ [doneButton setTitle:@"Search"];	break;}
-			case UIReturnKeySend:			{ [doneButton setTitle:@"Send"];	break;}
-			case UIReturnKeyYahoo:			{ [doneButton setTitle:@"Yahoo"];	break;}
-			case UIReturnKeyDone:			{ [doneButton setTitle:@"Done"];	break;}
-			case UIReturnKeyEmergencyCall:	{ [doneButton setTitle:@"Call"];	break;}
-			default:
-				break;
-		}
 	}
 
 	// Reset values in case device has rotated

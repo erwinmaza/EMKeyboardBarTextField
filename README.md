@@ -12,7 +12,14 @@ The EMKeyboardBarTextField was built for these cases.  A subclass of UITextField
 
 If all text inputs in the view are EMKeyboardBarTextFields, the view controller no longer needs to observe keyboard events. EMKeyboardBarTextField is fully self-contained.
 
-Device rotation is supported, as well as auto layout. EMKeyboardBarTextField will work whether it has NSLayoutConstraints or not. 
+The EMKeyboardBarTextField subclass code concerns itself only with the placement of the text field and related functions.
+
+	* It does not interfere with the UITextField's delegate or other properties. 
+	* It also does not guarantee a proper rendering under all circumstances. It is up to you to set reasonable sizes and options.
+
+The EMKeyboardBarTextField dismiss button title matches the UITextField's keyboard type.
+
+Device rotation is supported, as well as auto layout. EMKeyboardBarTextField will work whether it has NSLayoutConstraints or not (mostly - see below). 
 
 A sample app is included. While this is a universal build, EMKeyboardBarTextField has not been fully tested on the iPad. In particular, its behavior if loaded into a popover is unknown. Also, there is no support for split keyboards.
 
@@ -40,13 +47,11 @@ Some screenshots:
 
 ![EMKeyboardBarTextField Table Sections](EMKeyboardBarTextField/wiki/images/keyboardTextfield1.png)
  
---- 
- 
 ![EMKeyboardBarTextField Table Sections](EMKeyboardBarTextField/wiki/images/keyboardTextfield2.png)
  
----
- 
 ![EMKeyboardBarTextField Table Sections](EMKeyboardBarTextField/wiki/images/keyboardTextfield3.png)
+
+Feel free to toggle the "use auto layout" setting on the nib files.
 
 ## Auto Layout
 
@@ -76,8 +81,10 @@ The following is noted in EMKeyboardBarTextField.h:
 		* This means that if there are additional contraints, not owned by its immediate superview, EMKeyboardBarTextField 
 		may not work properly (may not render in the toolbar).
 	
+## TODO
 
-
+1 Full iPad support
+2 Localization of the "dismiss" button titles.
 
 ## License
 
