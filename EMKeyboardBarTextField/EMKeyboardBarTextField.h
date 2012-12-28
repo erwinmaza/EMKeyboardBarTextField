@@ -28,7 +28,7 @@
 
 /*
 
-	The property autoLayoutAnimateOnKeyboardWillShow only has an effect if Autolayout is used:
+	The property autoLayoutAnimateOnKeyboardWillShow only has an effect if auto layout is used:
 	
 		When FALSE (default) the text field's constraints held by its superview are not removed until the keyboard animation is complete.
 		Thus, the text field will remain in place, then pop into the toolbar at the end of the animation.
@@ -40,6 +40,10 @@
 	
 		The above is only an issue when the keyboard will show.  When it will hide, the constraints are restored at the start of the animation, so everything
 		is in place when the keyboard reveals the elements that were behind it.
+		
+	
+	Note: in order to faciliate frame animation, EMKeyboardBarTextField will temporarily remove it's own layout constraints, and those of its superview that affect it.
+		This means that if there are additional contraints, not owned by its immediate superview, EMKeyboardBarTextField may not work properly (will not render in the toolbar).
 
 */
 
