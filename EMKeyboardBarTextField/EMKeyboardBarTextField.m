@@ -237,6 +237,7 @@
 		toolBar.alpha = 0.0;
 	} completion:^(BOOL finished){
 		//  The order in which views are added to a superview and the addition of their contraints, matters
+		self.frame = originalFrame;
 		[originalContainer insertSubview:self atIndex:originalIndex];
 		if ([originalConstraints count]) {
 			[self removeConstraints:self.constraints];
