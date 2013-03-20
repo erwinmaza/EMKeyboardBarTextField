@@ -46,11 +46,11 @@ You'll need to download this entire repo for the sample app to work, as the EMKe
 
 Some screenshots:
 
-![Screenshot 1](erwinmaza.github.com/EMKeyboardBarTextField/images/keyboardTextfield1.png)
+![Screenshot 1](https://raw.github.com/erwinmaza/EMKeyboardBarTextField/gh-pages/images/keyboardTextfield1.png)
  
-![Screenshot 2](erwinmaza.github.com/EMKeyboardBarTextField/images/keyboardTextfield2.png)
+![Screenshot 2](https://raw.github.com/erwinmaza/EMKeyboardBarTextField/gh-pages/images/keyboardTextfield2.png)
  
-![Screenshot 3](erwinmaza.github.com/EMKeyboardBarTextField/images/keyboardTextfield3.png)
+![Screenshot 3](https://raw.github.com/erwinmaza/EMKeyboardBarTextField/gh-pages/images/keyboardTextfield3.png)
 
 Feel free to toggle the "use auto layout" setting on the nib files.
 
